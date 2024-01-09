@@ -1,0 +1,18 @@
+<navbar></navbar>
+<!-- form to update content -->
+<form class="container" #f="ngForm" (ngSubmit)="submit(f)">
+  <div class="form-group">
+    <label class="label" for="Note_Tittle">Note Title</label>
+    <input [(ngModel)]="htmlTitle" name="Note_Tittle" type="text" class="form-control" />
+
+  </div>
+</form>
+<div class="container">
+  <!-- Angular-rich-text editor component -->
+  <angular-editor [(ngModel)]="htmlContent" [config]="config"></angular-editor>
+
+
+
+  <button class="btn btn-primary save " (click)="submit(f)">Update</button>
+  <button class="btn btn-secondary save cancel" (click)="home()">Cancel</button>
+</div>

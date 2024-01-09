@@ -1,0 +1,39 @@
+<h1>CLOGGY NOTES</h1>
+<div>
+    <!-- form to register -->
+    <form #f="ngForm" (ngSubmit)="onsubmit(f)" class="form-content">
+        <div class="form-group">
+            <label class="label" for="username">Username</label>
+            <input #username="ngModel" ngModel="username" name="username" type="text" class="form-control" required />
+            <div class="alert alert-danger" *ngIf="username.touched && username.invalid">
+                Username should have atleast One Character
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="label" for="email">Email</label>
+            <input #email="ngModel" ngModel="email_id" name="email_id" type="text" class="form-control" email
+                required />
+            <div class="alert alert-danger" *ngIf="email.touched && (email.invalid || email.errors?.['email'])">
+                Enter Valid Email_Id
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="label" for="password">Password</label>
+            <input type="password" #password="ngModel" ngModel="password" name="password" class="form-control"
+                minlength="8" required />
+            <div class="alert alert-danger"
+                *ngIf="password.touched && (password.invalid || password.errors?.['minlength'])">
+                Password should be Atleast 8 Characters
+            </div>
+        </div>
+
+        <button class=" btn btn-primary">Register</button>
+    </form>
+</div>
+
+<div class="bottom">
+    <h6>Already Have an account?</h6>
+
+
+    <a class="link" href="http://localhost:4200/login"> Login </a>
+</div>

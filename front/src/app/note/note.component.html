@@ -1,0 +1,14 @@
+<navbar></navbar>
+<label class="label">Note Title</label>
+<input class="notetitle" placeholder="Enter Note Title" (change)="set_title(title)" #title type="text"
+  class="form-control">
+
+<div class="container">
+  <!-- Angular-rich-Text Editor component -->
+  <angular-editor [(ngModel)]="htmlContent" [config]="config"></angular-editor>
+
+
+
+  <button class="btn btn-primary save " (click)="submit()">Save</button>
+  <button class="btn btn-secondary  cancel" (click)="home()">Cancel</button>
+</div>

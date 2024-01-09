@@ -1,0 +1,31 @@
+<h1>CLOGGY NOTES</h1>
+<div>
+    <!-- login form component -->
+    <form #f="ngForm" (ngSubmit)="login(f)" class="form-content">
+        <div class="form-group">
+            <label class="label" for="email">Email</label>
+            <input #email="ngModel" ngModel="email_id" name="email_id" type="text" class="form-control" email
+                required />
+            <div class="alert alert-danger" *ngIf="email.touched && (email.invalid || email.errors?.['email'])">
+                Enter Valid Email_Id
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="label" for="password">Password</label>
+            <input type="password" #password="ngModel" ngModel="password" name="password" class="form-control"
+                minlength="8" required />
+            <div class="alert alert-danger"
+                *ngIf="password.touched && (password.invalid || password.errors?.['minlength'])">
+                Password should be Atleast 8 Characters
+            </div>
+        </div>
+
+        <button class=" btn btn-primary">Login</button>
+    </form>
+</div>
+<div>
+    <h6>Don't Have an account?</h6>
+
+
+    <a class="link" href="http://localhost:4200/register"> Register </a>
+</div>

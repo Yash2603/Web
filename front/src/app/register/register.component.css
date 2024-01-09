@@ -1,0 +1,60 @@
+.form-control {
+    width: 50%;
+
+    margin-left: 25%;
+    margin-top: 0%;
+    padding: auto
+}
+
+h1 {
+    text-align: center;
+    margin-top: 10%;
+    color: #003A64
+}
+
+.link {
+    color: #003A64;
+    font-size: 16px;
+    position: relative;
+    padding-top: 12px;
+    bottom: 30px;
+}
+
+h6 {
+    padding-top: 1%;
+    position: relative;
+    right: 7.6%;
+    color: #003A64;
+}
+
+.form-content {
+    text-align: left;
+    margin-top: 5%
+}
+
+.btn-primary {
+    margin-top: 3%;
+    color: #003A64;
+    background: #E1ECF0;
+    border: 2px solid #003A64;
+    margin-left: 48%;
+
+}
+
+.label {
+    margin-left: 25%
+}
+
+.bottom {
+    text-align: center;
+
+    position: relative;
+
+    left: 2%
+}
+
+.alert {
+    width: 50%;
+    position: relative;
+    left: 25%;
+}

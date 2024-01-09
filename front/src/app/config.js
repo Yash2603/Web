@@ -1,0 +1,1 @@
+module.export = base_url="";
